@@ -1,0 +1,268 @@
+/* styles.css */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar nav ul {
+  display: flex;
+  gap: 25px;
+}
+.navbar nav ul li a {
+  color: #fff;
+  transition: color 0.3s;
+}
+.navbar nav ul li a:hover {
+  color: #b29764;
+}
+.account-btn a {
+  background-color: #b29764;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('5b5caa4716fb-75399898_4K.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in;
+}
+.hero-content .cta-btn {
+  background-color: #b29764;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  animation: slideUp 1.5s ease-out;
+}
+.cta-btn:hover {
+  background: #8c7548;
+}
+
+/* Containers */
+.container {
+  max-width: 1100px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #b29764;
+  margin-bottom: 30px;
+}
+
+.rooms-container {
+  max-width: 1200px; /* container width */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between cards */
+  justify-content: center;
+}
+
+.room-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px; /* uniform width */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #003366; /* blue-black theme */
+}
+
+.room-description {
+  flex-grow: 1; /* push price & button to bottom */
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.room-price {
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #006400; /* dark green for price */
+}
+
+.book-btn {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #0055aa;
+}
+
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.testimonial-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-left: 4px solid #b29764;
+  max-width: 400px;
+  border-radius: 6px;
+  font-style: italic;
+  color: #eee;
+  animation: slideUp 1s ease-out;
+}
+
+/* Forms */
+form input, form textarea, form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background: #1a1a1a;
+  color: #fff;
+}
+form button {
+  background-color: #b29764;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #8c7548;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .testimonials {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking - LIT'S COURT APARTMENTS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">LIT'S COURT APARTMENTS</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="account-btn"><a href="#">My Account</a></div>
+  </header>
+
+  <section class="container">
+    <h2 class="section-title">Book Your Stay</h2>
+    <form action="booking-process.php" method="post">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="date" name="checkin" required />
+      <input type="date" name="checkout" required />
+      <select name="room_type" required>
+        <option value="">Select Room Type</option>
+        <option value="standard">Standard Room</option>
+        <option value="deluxe">Deluxe Room</option>
+        <option value="suite">Executive Suite</option>
+      </select>
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LIT'S COURT APARTMENTS. All rights reserved.</p>
+  </footer>
+</body>
+</html>
